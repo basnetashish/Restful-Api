@@ -9,7 +9,7 @@ Use App\Models\Review;
 class Product extends Model
 {
     use HasFactory;
-    protected $table = 'products';
+    protected $table =  'products';
     protected $fillable = [
         'name',
         'description',
@@ -23,3 +23,4 @@ class Product extends Model
         return $this->hasMany(Review::class);
     }
 }
+ 
