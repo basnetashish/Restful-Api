@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+Use App\Models\Review;
 
 class Product extends Model
 {
@@ -17,4 +18,8 @@ class Product extends Model
         'discount',
        
     ];
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

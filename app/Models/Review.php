@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Product;
 
 class Review extends Model
 {
@@ -16,4 +17,8 @@ class Review extends Model
         'review',
         'star'
     ];
+    public function product()
+    {
+    	return $this->belongsTo(Product::class); 
+    }
 }
